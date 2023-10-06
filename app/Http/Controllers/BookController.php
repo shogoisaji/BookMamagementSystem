@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\GoogleBooksClient;
 use Cache;
 use Illuminate\Http\Request;
 
@@ -16,18 +15,20 @@ class BookController extends Controller
 
         foreach ($books as $book) {
             // cache
-            $bookDetail = Cache::get('book_' . $book->isbn);
+            // $bookDetail = Cache::get('book_' . $book->isbn);
 
-            if (!$bookDetail) {
-                $bookDetail = $client->searchBooks($book->isbn);
-                if (!empty($bookDetail)) {
-                    $bookDetail = $bookDetail[0];
-                    Cache::put('book_' . $book->isbn, $bookDetail, 60 * 60 * 24); // Cache for 24 hours
-                }
-            }
-            if ($bookDetail) {
-                $bookDetails[] = $bookDetail;
-            }
+            // if (!$bookDetail) {
+            //     $bookDetail = $client->searchBooks($book->isbn);
+            //     if (!empty($bookDetail)) {
+            //         $bookDetail = $bookDetail[0];
+            //         Cache::put('book_' . $book->isbn, $bookDetail, 60 * 60 * 24); // Cache for 24 hours
+            //     }
+            // }
+            // if ($bookDetail) {
+            //     $bookDetails[] = $bookDetail;
+            // }
+            $bookDetail = $client->searchBooks($book->isbn);
+            $bookDetails[] = $bookDetail;
         }
 
         return view('books.index', ['books' => $bookDetails, 'bookPaginator' => $books]);

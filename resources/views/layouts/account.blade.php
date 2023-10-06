@@ -23,10 +23,10 @@
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 pr-6" id="navbar-user">
           <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lgs md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
             <li>
-              <a href={{ route('book.index') }}" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0">Home</a>
+              <a href="{{ route('book.index') }}" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0">Home</a>
             </li>
             <li>
-              <a href="#" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0">Rental</a>
+              <a href="{{ route('book.index') }}" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0">Rental</a>
             </li>
             <li>
               <a href="{{ route('account') }}" class="block py-2 pl-3 pr-4 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0">Account</a>
@@ -38,7 +38,7 @@
     <body class="font-sans text-gray-800 antialiased bg-gray-500">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-emerald-200">
             <div class="w-full p-10 lg:max-w-3xl mt-32 mb-10 bg-gray-200 shadow-md overflow-hidden sm:rounded-3xl">
-                {{ $slot }}
+                @yield('content')
             </div>
         </div>
     </body>

@@ -27,11 +27,20 @@ Route::get('/detail',  [\App\Http\Controllers\BookController::class, 'search'])
 Route::get('/search',  [\App\Http\Controllers\SearchController::class, 'search'])
     ->name('posts.search');
 
-Route::get('/book.index',  [\App\Http\Controllers\BookController::class, 'index']);
+Route::get('/book.index',  [\App\Http\Controllers\BookController::class, 'index'])
+    ->name('book.index');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/auth.register', [RegisteredUserController::class, 'create'])
+    ->middleware('guest')
+    ->name('register');
+
+Route::get('/password/request', 'PasswordController@request')->name('password.request');
+
+Route::get('/account', [\App\Http\Controllers\UserController::class, 'account'])->name('account');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
