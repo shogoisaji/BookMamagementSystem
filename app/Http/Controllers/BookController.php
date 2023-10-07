@@ -44,4 +44,24 @@ class BookController extends Controller
         }
         return view('books.search', ['books' => $books]);
     }
+
+    public function showRegistrationForm()
+    {
+        if (auth()->user()->is_admin) {
+            return view('books.registrationBook');
+        }
+        return redirect('/');
+    }
+
+    public function  registrationSearch(Request $request)
+    {
+        $client = new \App\Services\GoogleBooksClient(config('services.google_books.key'));
+        if ($request->has('keyword'))  {
+            $keyword = $request->input('keyword');
+            $books = $client->searchBooks($keyword);
+        } else {
+            $books = $client->searchBooks('books');
+        }
+        return view('books.searchResult', ['books' => $books]);
+    }
 }

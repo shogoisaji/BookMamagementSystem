@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="flex justify-start space-x-12 mb-10">
+    <div class="flex justify-between space-x-12 mb-10">
         <h1 class="text-3xl mb-10">Account</h1>
         <img src="{{ asset('avatars/' . Auth::user()->avatar . '.png') }}" alt="logo" width="100" height="100">
     </div>
@@ -48,7 +48,7 @@
             </button>
         </form>
         @if(Auth::user()->is_admin)
-        <form method="POST" action="{{ route('logout') }}">
+        <form method="GET" action="{{ route('registrationBook') }}">
             @csrf
             <button type="submit" class="shadow-lg bg-red-500 shadow-red-500/50 text-white rounded px-2 py-1">
                 管理者ページ

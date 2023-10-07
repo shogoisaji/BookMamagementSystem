@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +28,13 @@ Route::get('/detail',  [\App\Http\Controllers\BookController::class, 'search'])
 Route::get('/search',  [\App\Http\Controllers\SearchController::class, 'search'])
     ->name('posts.search');
 
-Route::get('/book.index',  [\App\Http\Controllers\BookController::class, 'index'])
-    ->name('book.index');
+Route::get('/book.list',  [\App\Http\Controllers\StockBookController::class, 'list'])
+    ->name('book.list');
+
+Route::get('/book/{id}', [\App\Http\Controllers\StockBookController::class, 'detail'])->name('book.detail');
+
+Route::get('/registrationBook', [\App\Http\Controllers\BookController::class, 'showRegistrationForm'])->name('registrationBook');
+Route::post('/registrationBook', [\App\Http\Controllers\BookController::class, 'registrationSearch'])->name('registrationBook.search');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -38,7 +44,7 @@ Route::get('/auth.register', [RegisteredUserController::class, 'create'])
     ->middleware('guest')
     ->name('register');
 
-Route::get('/password/request', 'PasswordController@request')->name('password.request');
+// Route::get('/password/request', 'PasswordController@request')->name('password.request');
 
 Route::get('/account', [\App\Http\Controllers\UserController::class, 'account'])->name('account');
 

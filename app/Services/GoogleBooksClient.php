@@ -23,7 +23,6 @@ class GoogleBooksClient
     $normalizedKeyword = str_replace('-', '', $keyword);
 
     $url = 'https://www.googleapis.com/books/v1/volumes?q=' . $normalizedKeyword . '&key=' . $this->apiKey;
-
     $client = new Client();
 
     try {
@@ -52,8 +51,8 @@ class GoogleBooksClient
     if (empty($data->items)) {
       return [];
     }
-    return $url;
-    // return $data->items;
+    // return $url;
+    return $data->items;
   }
 
 }
