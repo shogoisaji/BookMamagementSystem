@@ -14,7 +14,12 @@ class Comment extends Model
      *
      * @var array<string>
      */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
     protected $fillable = [
+        'comment_id',
         'stock_book_id',
         'user_id',
         'comment',

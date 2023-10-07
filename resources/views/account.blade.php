@@ -12,7 +12,7 @@
                 <tr>
                 <th class="w-2/6 text-left text-mg font-medium text-gray-800 uppercase">名前</th>
                 <th class="w-3/6 text-left text-mg font-medium text-gray-800 uppercase">Email</th>
-                <th class="w-1/6 text-left text-mg font-medium text-gray-800 uppercase">権限</th>
+                <th class="w-1/6 text-left text-mg font-medium text-gray-800 uppercase">管理者権限</th>
                 </tr>
             </thead>
             <tbody>
@@ -48,7 +48,7 @@
             </button>
         </form>
         @if(Auth::user()->is_admin)
-        <form method="GET" action="{{ route('registrationBook') }}">
+        <form method="GET" action="{{ route('searchForm') }}">
             @csrf
             <button type="submit" class="shadow-lg bg-red-500 shadow-red-500/50 text-white rounded px-2 py-1">
                 管理者ページ

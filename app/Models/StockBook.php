@@ -14,12 +14,16 @@ class StockBook extends Model
      *
      * @var array<string>
      */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class, 'stock_book_id');
+    }
     protected $primaryKey = 'stock_book_id';
     protected $fillable = [
         'stock_book_id',
-        'title',
-        'author',
-        'isbn',
-        'image',
+        'title' => 'nullable',
+        'author' => 'nullable',
+        'isbn' => 'nullable',
+        'image' => 'nullable',
     ];
 }

@@ -27,7 +27,7 @@ class BookController extends Controller
             // if ($bookDetail) {
             //     $bookDetails[] = $bookDetail;
             // }
-            $bookDetail = $client->searchBooks($book->isbn);
+            $bookDetail = $client->searchBook($book->isbn);
             $bookDetails[] = $bookDetail;
         }
 
@@ -38,29 +38,29 @@ class BookController extends Controller
         $client = new \App\Services\GoogleBooksClient(config('services.google_books.key'));
         if ($request->has('keyword'))  {
             $keyword = $request->input('keyword');
-            $books = $client->searchBooks($keyword);
+            $books = $client->searchBook($keyword);
         } else {
-            $books = $client->searchBooks('books');
+            $books = $client->searchBook('books');
         }
         return view('books.search', ['books' => $books]);
     }
 
-    public function showRegistrationForm()
+    public function searchForm()
     {
         if (auth()->user()->is_admin) {
-            return view('books.registrationBook');
+            return view('books.searchForm');
         }
         return redirect('/');
     }
 
-    public function  registrationSearch(Request $request)
+    public function  searchResult(Request $request)
     {
         $client = new \App\Services\GoogleBooksClient(config('services.google_books.key'));
         if ($request->has('keyword'))  {
             $keyword = $request->input('keyword');
-            $books = $client->searchBooks($keyword);
+            $books = $client->searchBook($keyword);
         } else {
-            $books = $client->searchBooks('books');
+            $books = $client->searchBook('books');
         }
         return view('books.searchResult', ['books' => $books]);
     }

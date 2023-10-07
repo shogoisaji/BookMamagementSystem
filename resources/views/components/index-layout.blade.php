@@ -17,7 +17,7 @@
     <x-navigation-bar></x-navigation-bar>
     <body class="font-sans text-gray-800 antialiased bg-gray-500">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-emerald-200">
-            <div class="w-full p-10 lg:max-w-3xl mt-32 mb-10 bg-gray-200 shadow-md overflow-hidden sm:rounded-3xl">
+            <div class="w-full p-10 lg:max-w-4xl mt-32 mb-10 bg-gray-200 shadow-md overflow-hidden rounded-3xl">
                 {{ $slot }}
             </div>
         </div>

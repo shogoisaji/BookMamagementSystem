@@ -31,10 +31,15 @@ Route::get('/search',  [\App\Http\Controllers\SearchController::class, 'search']
 Route::get('/book.list',  [\App\Http\Controllers\StockBookController::class, 'list'])
     ->name('book.list');
 
-Route::get('/book/{id}', [\App\Http\Controllers\StockBookController::class, 'detail'])->name('book.detail');
+Route::get('/book/{id}', [\App\Http\Controllers\StockBookController::class, 'detail'])->name('detail');
 
-Route::get('/registrationBook', [\App\Http\Controllers\BookController::class, 'showRegistrationForm'])->name('registrationBook');
-Route::post('/registrationBook', [\App\Http\Controllers\BookController::class, 'registrationSearch'])->name('registrationBook.search');
+Route::get('/books.searchForm', [\App\Http\Controllers\BookController::class, 'searchForm'])->name('searchForm');
+
+Route::post('/register-book', [\App\Http\Controllers\StockBookController::class, 'store'])->name('registrationBook');
+
+Route::post('/books.searchForm', [\App\Http\Controllers\BookController::class, 'searchResult'])->name('searchResult');
+
+Route::post('/books/{id}/rental', [\App\Http\Controllers\RentalBookController::class, 'rental'])->name('rental');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

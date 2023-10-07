@@ -15,6 +15,7 @@ class Rental extends Model
      * @var array<string>
      */
     protected $fillable = [
+        'rental_id',
         'book_id',
         'user_id',
         'rental_date',
