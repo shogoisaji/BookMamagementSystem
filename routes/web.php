@@ -41,6 +41,8 @@ Route::post('/books.searchForm', [\App\Http\Controllers\BookController::class, '
 
 Route::post('/books/{id}/rental', [\App\Http\Controllers\RentalBookController::class, 'rental'])->name('rental');
 
+Route::post('/comment', [\App\Http\Controllers\CommentController::class, 'store'])->name('comment.store');
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
