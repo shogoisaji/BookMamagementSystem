@@ -43,6 +43,10 @@ Route::post('/books/{id}/rental', [\App\Http\Controllers\RentalBookController::c
 
 Route::post('/comment', [\App\Http\Controllers\CommentController::class, 'store'])->name('comment.store');
 
+Route::get('/rentals', [\App\Http\Controllers\RentalBookController::class, 'list'])->name('rentals')->middleware('auth');;
+
+Route::post('/books/{id}/return', [\App\Http\Controllers\StockBookController::class, 'return'])->name('return');
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');

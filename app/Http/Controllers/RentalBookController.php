@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Rental;
 use App\Models\StockBook;
+use Auth;
 use Illuminate\Http\Request;
 
 class RentalBookController extends Controller
@@ -17,7 +18,7 @@ class RentalBookController extends Controller
 
         $rental = new Rental;
         $rental->user_id = auth()->id();
-        $rental->book_id = $stockBook->stock_book_id;
+        $rental->stock_book_id = $stockBook->stock_book_id;
         $rental->rental_date = now();
         $rental->return_date = now()->addDays(7);
         $rental->save();
@@ -26,5 +27,13 @@ class RentalBookController extends Controller
         $stockBook->save();
 
         return redirect()->route('book.list')->with('success', 'The book has been rented.');
+    }
+
+    public function list()
+    {
+        $userId = Auth::id();
+        $rentals = Rental::with('stockBook')->where('user_id', $userId)->orderBy('created_at', 'desc')->get();
+
+        return view('books.rentals', ['rentals' => $rentals]);
     }
 }

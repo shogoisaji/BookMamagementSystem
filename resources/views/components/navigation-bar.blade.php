@@ -10,7 +10,7 @@
                 <a href="{{ route('book.list') }}" class="block py-2 pl-3 pr-3 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0">Home</a>
             </li>
             <li>
-                <a href="{{ route('book.list') }}" class="block py-2 pl-3 pr-3 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0">Rental</a>
+                <a href="{{ route('rentals') }}" class="block py-2 pl-3 pr-3 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0">Rental</a>
             </li>
             <li>
                 <a href="{{ route('account') }}" class="block py-2 pl-3 pr-3 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0">Account</a>

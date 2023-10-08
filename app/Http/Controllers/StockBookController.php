@@ -14,11 +14,9 @@ class StockBookController extends Controller
     return view('books.list', ['stock_books' => $stockBooks, 'bookPaginator' => $stockBooks]);
     }
 
-    
-
     public function detail($id)
     {
-        $stockBook = StockBook::with(['comments.user'])->find($id);
+        $stockBook = StockBook::with(['comments.user',  'rentals'])->find($id);
         return view('books.detail', ['stock_book' => $stockBook]);
     }
 
@@ -34,6 +32,22 @@ class StockBookController extends Controller
         $stockBook->isbn = $book[0]->volumeInfo->industryIdentifiers[1]->identifier ?? '1234567891012';
         $stockBook->image = $book[0]->volumeInfo->imageLinks->thumbnail ?? null;
         $stockBook->save();
+
+        return redirect()->route('book.list');
+    }
+
+    // return book is_rental = false
+    public function return($id)
+    {
+        $stockBook = StockBook::find($id);
+        $stockBook->is_rental = false;
+        $stockBook->save();
+
+        $rental = $stockBook->rentals()->latest('created_at')->first();
+        if ($rental) {
+            $rental->returned_date = now();
+            $rental->save();
+        }
 
         return redirect()->route('book.list');
     }

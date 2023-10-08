@@ -17,6 +17,9 @@ class StockBook extends Model
     public function comments()
     {
         return $this->hasMany(Comment::class, 'stock_book_id');
+    }public function rentals()
+    {
+        return $this->hasMany(Rental::class, 'stock_book_id');
     }
     protected $primaryKey = 'stock_book_id';
     protected $fillable = [

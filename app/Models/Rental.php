@@ -9,6 +9,7 @@ class Rental extends Model
 {
     use HasFactory;
 
+    protected $dates = ['return_date'];
     /**
      * The attributes that are mass assignable.
      *
@@ -16,9 +17,15 @@ class Rental extends Model
      */
     protected $fillable = [
         'rental_id',
-        'book_id',
+        'stock_book_id',
         'user_id',
         'rental_date',
         'return_date',
+        'returned_date',
     ];
+
+    public function stockBook()
+    {
+        return $this->belongsTo(StockBook::class,'stock_book_id');
+    }
 }
