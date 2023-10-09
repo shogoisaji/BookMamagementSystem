@@ -11,4 +11,20 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    envPrefix: 'VITE_',
+
+    build: {
+    minify: 'terser',
+    terserOptions: {
+        compress: {
+        drop_console: true,
+        }
+    },
+
+    rollupOptions: {
+        onwarn: (warning) => {
+        console.error(warning.message);
+        }
+    }
+    }
 });
