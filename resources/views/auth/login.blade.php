@@ -28,9 +28,6 @@
             <a class="underline text-sm text-gray-100 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('register') }}">
                 {{ __('新規登録') }}
             </a>
-
-            {{-- <p class='text-sm text-gray-600'>sample:a@a password</p> --}}
-
             <x-primary-button class="ml-3">
                 {{ __('Log in') }}
             </x-primary-button>
