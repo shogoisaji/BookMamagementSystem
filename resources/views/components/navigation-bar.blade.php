@@ -16,7 +16,9 @@
                 <a href="{{ route('account') }}" class="block py-2 pl-3 pr-3 text-gray-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-cyan-700 md:p-0">Account</a>
             </li>
             <li>
-                <img class="-mt-4" src="{{ asset('avatars/' . Auth::user()->avatar . '.png') }}" alt="logo" width="50" height="50">
+                <a href="{{ route('account') }}" class="">
+                    <img class="-mt-4" src="{{ asset('avatars/' . Auth::user()->avatar . '.png') }}" alt="logo" width="50" height="50">
+                </a>
             </li>
         </ul>
     </div>

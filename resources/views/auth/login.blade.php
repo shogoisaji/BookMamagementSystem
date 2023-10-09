@@ -29,7 +29,7 @@
                 {{ __('新規登録') }}
             </a>
 
-            <p class='text-sm text-gray-600'>sample:a@a password</p>
+            {{-- <p class='text-sm text-gray-600'>sample:a@a password</p> --}}
 
             <x-primary-button class="ml-3">
                 {{ __('Log in') }}

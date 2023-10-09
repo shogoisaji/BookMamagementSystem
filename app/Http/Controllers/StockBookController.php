@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class StockBookController extends Controller
 {
+    // main page
     public function list()
     {
     $stockBooks = StockBook::paginate(10);
@@ -21,12 +22,12 @@ class StockBookController extends Controller
     }
 
     // request -> isbn
+    // searchResult -> save stock_books table
     public function store(Request $request)
     {
         $client = new \App\Services\GoogleBooksClient(config('services.google_books.key'));
         $book = $client->searchBook($request->isbn);
         $stockBook = new StockBook();
-        // dd($book);
         $stockBook->title = $book[0]->volumeInfo->title ?? 'no title';
         $stockBook->author = $book[0]->volumeInfo->authors[0] ?? 'null';
         $stockBook->isbn = $book[0]->volumeInfo->industryIdentifiers[1]->identifier ?? '1234567891012';
@@ -36,13 +37,14 @@ class StockBookController extends Controller
         return redirect()->route('book.list');
     }
 
-    // return book is_rental = false
     public function return($id)
     {
+        // StockBook Model save table
         $stockBook = StockBook::find($id);
         $stockBook->is_rental = false;
         $stockBook->save();
 
+        // Rental Model save table
         $rental = $stockBook->rentals()->latest('created_at')->first();
         if ($rental) {
             $rental->returned_date = now();

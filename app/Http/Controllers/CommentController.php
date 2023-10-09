@@ -17,7 +17,7 @@ class CommentController extends Controller
             'comment' => $request->comment,
             'stock_book_id' => $request->stock_book_id,
             'user_id' => auth()->id(),
-            'recommend' => $request->recommend,
+            'recommend' => (int) $request->recommend,
         ]);
 
         $comment->save();

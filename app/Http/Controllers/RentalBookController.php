@@ -16,6 +16,7 @@ class RentalBookController extends Controller
             return redirect()->back()->with('error', 'This book is already rented.');
         }
 
+        // Rental Model save table
         $rental = new Rental;
         $rental->user_id = auth()->id();
         $rental->stock_book_id = $stockBook->stock_book_id;
@@ -23,12 +24,14 @@ class RentalBookController extends Controller
         $rental->return_date = now()->addDays(7);
         $rental->save();
 
+        // StockBook Model save table
         $stockBook->is_rental = true;
         $stockBook->save();
 
         return redirect()->route('book.list')->with('success', 'The book has been rented.');
     }
 
+    // login user rental history list
     public function list()
     {
         $userId = Auth::id();

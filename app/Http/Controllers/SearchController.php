@@ -7,20 +7,36 @@ use Illuminate\View\View;
 
 class SearchController extends Controller
 {
-    public function index() : View
+    // use api google books
+    public function search(Request $request)
     {
-        $posts = \App\Models\Post::query()->paginate(10);
-
-        return view('posts.index', compact('posts'));
+        $client = new \App\Services\GoogleBooksClient(config('services.google_books.key'));
+        if ($request->has('keyword'))  {
+            $keyword = $request->input('keyword');
+            $books = $client->searchBook($keyword);
+        } else {
+            $books = $client->searchBook('books');
+        }
+        return view('books.search', ['books' => $books]);
     }
 
-    public function search(Request $request) : View
+    public function searchForm()
     {
-        $keyword = $request->input('keyword');
-
-        $posts = \App\Models\Post::search($keyword)->paginate(10)->withQueryString();
-
-        return view('posts.index', compact('posts', 'keyword'));
+        if (auth()->user()->is_admin) {
+            return view('books.searchForm');
+        }
+        return redirect('/');
     }
 
+    public function  searchResult(Request $request)
+    {
+        $client = new \App\Services\GoogleBooksClient(config('services.google_books.key'));
+        if ($request->has('keyword'))  {
+            $keyword = $request->input('keyword');
+            $books = $client->searchBook($keyword);
+        } else {
+            $books = $client->searchBook('books');
+        }
+        return view('books.searchResult', ['books' => $books]);
+    }
 }

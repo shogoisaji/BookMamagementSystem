@@ -9,6 +9,7 @@ class Rental extends Model
 {
     use HasFactory;
 
+    // return_date is string -> date
     protected $dates = ['return_date'];
     /**
      * The attributes that are mass assignable.
@@ -24,6 +25,7 @@ class Rental extends Model
         'returned_date',
     ];
 
+    // StockBook relationship
     public function stockBook()
     {
         return $this->belongsTo(StockBook::class,'stock_book_id');

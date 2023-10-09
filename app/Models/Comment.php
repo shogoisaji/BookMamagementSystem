@@ -14,10 +14,12 @@ class Comment extends Model
      *
      * @var array<string>
      */
+    // User relationship
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+
     protected $fillable = [
         'comment_id',
         'stock_book_id',
