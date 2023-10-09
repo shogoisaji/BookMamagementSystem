@@ -15,6 +15,11 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 |
 */
 
+//test
+Route::get('/error-test', function () {
+    throw new Exception('This is a test error');
+});
+
 Route::view('/', 'auth.login');
 
 Route::get('/auth.register', [RegisteredUserController::class, 'create'])
