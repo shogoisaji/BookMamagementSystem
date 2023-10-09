@@ -3,15 +3,11 @@
         "hnd1"
     ],
     "functions": {
-        "api/*.php": {
+        "api/index.php": {
             "runtime": "vercel-php@0.6.0"
         }
     },
     "routes": [
-        {
-            "src": "/build/assets/(.*)",
-            "dest": "/public/build/assets/$1"
-        },
         {
             "src": "/favicon.ico",
             "dest": "/public/favicon.ico"
