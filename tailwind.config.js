@@ -10,7 +10,10 @@ export default {
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
-        "./node_modules/flowbite/**/*.js"
+        "./resources/**/*.jsx",
+        "./resources/**/*.php",
+        "./resources/**/*.html",
+        "./node_modules/flowbite/**/*.js",
     ],
 
     theme: {
