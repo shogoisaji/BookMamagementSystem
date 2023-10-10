@@ -2,11 +2,13 @@
     "regions": [
         "hnd1"
     ],
-    "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.6.0"
+    "builds": [
+        {
+            "src": "index.html",
+            "use": "@vercel/static",
+            "immutable": false
         }
-    },
+    ],
     "routes": [
         {
             "src": "/favicon.ico",
@@ -18,7 +20,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/public/index.html"
         }
     ]
 }
