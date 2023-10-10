@@ -1,19 +1,19 @@
 {
-    "builds": [
-        {
-            "src": "index.html",
-            "use": "@vercel/static",
-            "config": {
-                "buildCommand": "npm install && vite build",
-                "outputPath": "public",
-                "installCommand": "npm install"
-            }
-        }
+    "regions": [
+        "hnd1"
     ],
     "routes": [
         {
+            "src": "/favicon.ico",
+            "dest": "/public/favicon.ico"
+        },
+        {
+            "src": "/robots.txt",
+            "dest": "/public/robots.txt"
+        },
+        {
             "src": "/(.*)",
-            "dest": "/index.html"
+            "dest": "/public/index.html"
         }
     ]
 }
