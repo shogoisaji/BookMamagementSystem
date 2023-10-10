@@ -2,7 +2,18 @@
     "builds": [
         {
             "src": "index.html",
-            "use": "@vercel/static"
+            "use": "@vercel/static",
+            "config": {
+                "buildCommand": "npm install && vite build",
+                "outputPath": "public",
+                "installCommand": "npm install"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/index.html"
         }
     ]
 }
