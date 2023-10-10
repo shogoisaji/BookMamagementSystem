@@ -1,25 +1,8 @@
 {
-    "regions": [
-        "hnd1"
-    ],
     "builds": [
         {
             "src": "index.html",
             "use": "@vercel/static"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/favicon.ico",
-            "dest": "/public/favicon.ico"
-        },
-        {
-            "src": "/robots.txt",
-            "dest": "/public/robots.txt"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/public/index.html"
         }
     ]
 }
