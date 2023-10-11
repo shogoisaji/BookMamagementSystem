@@ -180,7 +180,7 @@
         @foreach($stock_book->comments as $comment)
         <article class="max-w-md p-6 mb-2 bg-slate-200 border border-violet-100 rounded-xl shadow">
           <div class="flex items-center mb-2 space-x-4">
-              <img class="w-12 h-12 rounded-full" src="{{ asset('build/assets/avatars/' . $comment->user->avatar . '.png') }}" alt="">
+              <img class="w-12 h-12 rounded-full" src="{{ asset('public/avatars/' . $comment->user->avatar . '.png') }}" alt="">
               <div class="space-y-1 font-medium text-white">
                 <p class="text-slate-600 text-lg">{{ $comment->user->name }}</p>
                 <time datetime="{{ $comment->created_at->format('Y-m-d H:i') }}" class="block text-sm text-gray-600">{{ $comment->created_at->format('Y/m/d') }}</time>

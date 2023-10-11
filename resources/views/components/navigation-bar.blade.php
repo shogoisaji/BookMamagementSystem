@@ -17,7 +17,7 @@
             </li>
             <li>
                 <a href="{{ route('account') }}" class="">
-                    <img class="-mt-4" src="{{ asset('build/assets/avatars/' . Auth::user()->avatar . '.png') }}" alt="logo" width="50" height="50">
+                    <img class="-mt-4" src="{{ asset('public/avatars/' . Auth::user()->avatar . '.png') }}" alt="logo" width="50" height="50">
                 </a>
             </li>
         </ul>
