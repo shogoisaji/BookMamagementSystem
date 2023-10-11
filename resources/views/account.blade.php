@@ -23,22 +23,6 @@
                 </tr>
             </tbody>
         </table>
-        {{-- <h1 class="text-2xl mb-2">Rental</h1>
-        <table class="min-w-full divide-y divide-gray-800 mb-10">
-            <thead>
-                <tr>
-                <th class="w-2/6 text-left text-mg font-medium text-gray-800 uppercase">タイトル</th>
-                <th class="w-3/6 text-left text-mg font-medium text-gray-800 uppercase">返却期日</th>
-                <th class="w-1/6 text-left text-mg font-medium text-gray-800 uppercase"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>{{ Auth::user()->name }}</td>
-                <td>{{ Auth::user()->email }}</td>
-                </tr>
-            </tbody>
-        </table> --}}
     </div>
     <div class="flex justify-end space-x-12">
         <form method="POST" action="{{ route('logout') }}">
