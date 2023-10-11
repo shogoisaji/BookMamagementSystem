@@ -4,7 +4,7 @@
       @if(isset($stock_book->image))
         <img src="{{ $stock_book->image }}" class="mt-4 cols-span-1" style="height:300px; object-fit: cover;"><br>
       @else
-        <lottie-player src="{{ asset('animations/no_book.json') }}" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+        <lottie-player src="{{ asset('build/assets/animations/no_book.json') }}" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
       @endif
       <div class="flex flex-col space-y-2">
         <h1 class="cols-span-1 text-2xl">{{ $stock_book->title }}</h1>
@@ -43,7 +43,7 @@
                         <p class="text-lg leading-relaxed font-semibold text-red-500">返却日 : {{ now()->addDays(7)->format('Y/m/d') }}
                         </p>
                       </div>
-                      <lottie-player src="{{ asset('animations/dog_walk.json') }}" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay class="-ml-8 -mr-2"></lottie-player>
+                      <lottie-player src="{{ asset('build/assets/animations/dog_walk.json') }}" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay class="-ml-8 -mr-2"></lottie-player>
                     </div>
                     <div class="flex flex-col items-end p-6 space-x-2 border-t border-gray-200 rounded-b">
                         <form method="POST" action="{{ route('rental', ['id' => $stock_book->stock_book_id]) }}">
@@ -180,7 +180,7 @@
         @foreach($stock_book->comments as $comment)
         <article class="max-w-md p-6 mb-2 bg-slate-200 border border-violet-100 rounded-xl shadow">
           <div class="flex items-center mb-2 space-x-4">
-              <img class="w-12 h-12 rounded-full" src="{{ asset('avatars/' . $comment->user->avatar . '.png') }}" alt="">
+              <img class="w-12 h-12 rounded-full" src="{{ asset('build/assets/avatars/' . $comment->user->avatar . '.png') }}" alt="">
               <div class="space-y-1 font-medium text-white">
                 <p class="text-slate-600 text-lg">{{ $comment->user->name }}</p>
                 <time datetime="{{ $comment->created_at->format('Y-m-d H:i') }}" class="block text-sm text-gray-600">{{ $comment->created_at->format('Y/m/d') }}</time>

@@ -15,7 +15,7 @@
                         @if(isset($book->volumeInfo->imageLinks->thumbnail))
                             <img src="{{ $book->volumeInfo->imageLinks->thumbnail }}" class="cols-span-1 object-contain" style="width: 100px; height:100px;"><br>
                         @else
-                            <lottie-player src="{{ asset('animations/no_book.json') }}" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+                            <lottie-player src="{{ asset('build/assets/animations/no_book.json') }}" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
                         @endif
                     </div>
                     <div class="flex flex-col space-y-2">

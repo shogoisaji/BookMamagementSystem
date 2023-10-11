@@ -18,7 +18,7 @@
               @if(isset($rental->stockBook->image))
                 <img src="{{ $rental->stockBook->image }}" class="cols-span-1 object-contain" style="width:100px; height:100px;"><br>
               @else
-                <lottie-player src="{{ asset('animations/no_book.json') }}" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
+                <lottie-player src="{{ asset('build/assets/animations/no_book.json') }}" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
               @endif
           </div>
           <div class="flex flex-col space-y-2">
@@ -50,7 +50,7 @@
                     <p class="text-lg leading-relaxed font-semibold text-blue-500">本を返却しますか？
                     </p>
                   </div>
-                  <lottie-player src="{{ asset('animations/dog_walk.json') }}" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay class="-ml-8 -mr-2"></lottie-player>
+                  <lottie-player src="{{ asset('build/assets/animations/dog_walk.json') }}" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay class="-ml-8 -mr-2"></lottie-player>
                 </div>
                 <div class="flex flex-col items-end p-6 space-x-2 border-t border-gray-200 rounded-b">
                   <form method="POST" action="{{ route('return', ['id' => $rental->stock_book_id]) }}">
