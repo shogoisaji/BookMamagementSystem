@@ -1,9 +1,9 @@
-## Book Management System
+# Book Management System
 
 ### 機能
 
-- ログイン
 - 新規登録
+- ログイン
 - 在庫書籍一覧表示
 - 書籍詳細確認
 - コメント、おすすめ度の入力と確認
@@ -11,16 +11,30 @@
 - 書籍の登録（admin only）
 - 書籍登録用の書籍検索 Google Books Api
 - アカウント管理
+<br>
+<br><br>新規登録
+![bms1](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/62e43d27-a5eb-47e1-a79f-911c02d5546b)
+<br><br>ログイン  
+![bms2](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/a51da869-bac4-4880-b37a-8bb13e928883)
+<br><br>在庫書籍一覧表示
+![bms3](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/944c7c4e-848b-44d3-a186-69fbd1a8e077)
+<br><br>書籍詳細確認
+![bms4](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/a112197b-47c0-4b43-a33d-307ae2289f2b)
+<br><br>コメント、おすすめ度の入力と確認
+![bms5](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/f14a98a7-4b3a-496e-b7b2-d4c78681e6af)
+<br><br>書籍のレンタル、返却
+![bms6](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/73fa3a60-f320-4f0b-9c2c-91586455b256)
+<br><br>書籍の登録（admin only）
+![bms7](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/344b0ddc-5740-4d2e-93eb-05f56bef91eb)
+<br><br>書籍登録用の書籍検索 Google Books Api（admin only）
+![bms8](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/b53616ce-c860-40b2-aa0b-b40276c03196)
 
-![bms1](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/144a2c45-5751-4d53-b3a6-340eaa454529)
-![bms 2](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/57b66707-e16e-4b35-9f57-b96de5d71737)
-![bms3](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/11b34dbe-1a9d-4bca-bb67-891fe48a3201)
-![bms4](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/38408ffd-7f4d-4570-a0e6-8a1c3ac874dc)
-![bms5](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/f955a93c-e581-465b-ad37-a331ab052bf7)
-![bms6](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/817e5be4-d884-4a1f-a5fc-e49e16aed0d7)
-![bms7](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/38dd4614-160a-45dc-86b9-85f9c72210d0)
-![bms8](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/0fb64343-37c5-4756-89b2-5db0b40e6b13)
-![bms9](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/cd3bc57f-9ff1-4a63-a289-197a15377186)
+![bms9](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/8464e4c1-fa48-40c9-8360-4d7a4c18f777)
+
+![bms10](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/fefda360-ea6c-4ce9-a52f-840dd628d427)
+<br><br>アカウント管理
+![bms11](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/f7de5ddb-4a83-41d0-a160-61014acf9ac7)
+
 
 ## License
 
