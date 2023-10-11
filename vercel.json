@@ -22,6 +22,14 @@
             "dest": "/public/build/assets/$1"
         },
         {
+            "src": "/animations/(.*)",
+            "dest": "/public/animations/$1"
+        },
+        {
+            "src": "/avatars/(.*)",
+            "dest": "/public/avatars/$1"
+        },
+        {
             "src": "/favicon.ico",
             "dest": "/public/favicon.ico"
         },
