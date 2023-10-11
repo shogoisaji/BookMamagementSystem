@@ -2,11 +2,10 @@
 
 ### ツール
 
-- Laravel
-- tailwindcss
-- Breeze
-- supabase
-- lottie
+- Laravel (framework)
+- tailwindcss (css)
+- supabase (database)
+- lottie (animation)
 
 ### 機能
 
