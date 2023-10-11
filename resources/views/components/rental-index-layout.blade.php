@@ -15,10 +15,11 @@
         <!-- Scripts -->
         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
         <link rel="stylesheet" href="https://book-mamagement-system.vercel.app/build/assets/app-744d80f7.css">
-        <script src="https://book-mamagement-system.vercel.app/build/assets/app-633d7d34.js defer"></script>
+         defer"></script>
     </head>
     
     <body class="font-sans antialiased">
         {{ $slot }}
+        <script src="https://book-mamagement-system.vercel.app/build/assets/app-633d7d34.js
     </body>
 </html>

@@ -14,7 +14,6 @@
         <!-- Scripts -->
         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
         <link rel="stylesheet" href="https://book-mamagement-system.vercel.app/build/assets/app-744d80f7.css">
-        <script src="https://book-mamagement-system.vercel.app/build/assets/app-633d7d34.js defer"></script>
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-emerald-200">
@@ -27,5 +26,6 @@
                 {{ $slot }}
             </div>
         </div>
+        <script src="https://book-mamagement-system.vercel.app/build/assets/app-633d7d34.js defer"></script>
     </body>
 </html>
