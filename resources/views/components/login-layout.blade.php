@@ -14,10 +14,10 @@
         <!-- Scripts -->
         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
         <!-- Styles -->
-        <link rel="stylesheet" href="/build/assets/app.css">
+        <link rel="stylesheet" href="/build/assets/app-744d80f7.css">
 
         <!-- Scripts -->
-        <script src="/build/assets/app.js"></script>
+        <script src="/build/assets/app-633d7d34.js"></script>
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-emerald-200">
