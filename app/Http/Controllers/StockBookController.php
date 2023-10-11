@@ -45,7 +45,7 @@ class StockBookController extends Controller
         $stockBook->save();
 
         // Rental Model save table
-        $rental = $stockBook->rentals()->latest('created_at')->first();
+        $rental = \App\Models\Rental::where('stock_book_id', $id)->latest('created_at')->first();
         if ($rental) {
             $rental->returned_date = now();
             $rental->save();

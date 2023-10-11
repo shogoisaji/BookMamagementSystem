@@ -10,7 +10,7 @@
   @endif
   <div>
   <ul class="w-full divide-y divide-gray-400" style="min-height:200px;">
-    @foreach($rentals as $rental)
+    @foreach($rentals as $key => $rental)
     <li class="pt-4">
       <div class="flex justify-between">
         <a class="flex items-center space-x-4" href="{{ route('detail', ['id' => $rental->stockBook->stock_book_id]) }}">
@@ -28,17 +28,17 @@
         </a>
         <div class="mb-4 mr-4 flex items-end">
           @if($rental->returned_date==null)
-          <button data-modal-target="staticModal" data-modal-toggle="staticModal" class="shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1" type="button">
+          <button data-modal-target="staticModal{{ $key }}" data-modal-toggle="staticModal{{ $key }}" class="shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1" type="button">
             返却
           </button>
-          <div id="staticModal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="items-center fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div id="staticModal{{ $key }}" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="items-center fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
             <div class="relative w-full max-w-sm max-h-full mx-auto">
               <div class="relative bg-white rounded-lg shadow">
                 <div class="flex items-start justify-between p-4 border-b rounded-t">
                   <h3 class="text-xl font-semibold text-gray-900">
                     返却確認
                   </h3>
-                  <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="staticModal">
+                  <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="staticModal{{ $key }}">
                     <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                     </svg>
@@ -53,7 +53,7 @@
                   <lottie-player src="{{ asset('animations/dog_walk.json') }}" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay class="-ml-8 -mr-2"></lottie-player>
                 </div>
                 <div class="flex flex-col items-end p-6 space-x-2 border-t border-gray-200 rounded-b">
-                  <form method="POST" action="{{ route('return', ['id' => $rental->stockBook->stock_book_id]) }}">
+                  <form method="POST" action="{{ route('return', ['id' => $rental->stock_book_id]) }}">
                     @csrf
                     <button type="submit" class="shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1">
                       Rental

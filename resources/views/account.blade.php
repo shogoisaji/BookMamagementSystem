@@ -23,7 +23,7 @@
                 </tr>
             </tbody>
         </table>
-        <h1 class="text-2xl mb-2">Rental</h1>
+        {{-- <h1 class="text-2xl mb-2">Rental</h1>
         <table class="min-w-full divide-y divide-gray-800 mb-10">
             <thead>
                 <tr>
@@ -38,7 +38,7 @@
                 <td>{{ Auth::user()->email }}</td>
                 </tr>
             </tbody>
-        </table>
+        </table> --}}
     </div>
     <div class="flex justify-end space-x-12">
         <form method="POST" action="{{ route('logout') }}">
