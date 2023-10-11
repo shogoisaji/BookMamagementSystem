@@ -4,7 +4,7 @@
 <div class="container">
     <div class="flex justify-between space-x-12 mb-10">
         <h1 class="text-3xl mb-10">Account</h1>
-        <img src="{{ asset('public/avatars/' . Auth::user()->avatar . '.png') }}" alt="logo" width="100" height="100">
+        <img src="{{ asset('https://book-mamagement-system.vercel.app/avatars/' . Auth::user()->avatar . '.png') }}" alt="logo" width="100" height="100">
     </div>
     <div class="pl-4">
         <table class="min-w-full divide-y divide-gray-800 mb-10">

@@ -1,7 +1,7 @@
 <nav class="w-full fixed h-36 -mt-12 bg-emerald-500 border-gray-200 z-50">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
     <div class="flex items-center flex-shrink-0 pl-2">
-        <lottie-player src="{{ asset('build/assets/animations/bird_walk.json') }}" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+        <lottie-player src="{{ asset('https://book-mamagement-system.vercel.app/animations/bird_walk.json') }}" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
         <span class="-ml-8 self-center lg:text-3xl text-xl font-semibold whitespace-nowrap text-gray-100">Book Mamagement System</span>
     </div>
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 pr-6 mt-4" id="navbar-user">
@@ -17,7 +17,7 @@
             </li>
             <li>
                 <a href="{{ route('account') }}" class="">
-                    <img class="-mt-4" src="{{ asset('public/avatars/' . Auth::user()->avatar . '.png') }}" alt="logo" width="50" height="50">
+                    <img class="-mt-4" src="{{ asset('https://book-mamagement-system.vercel.app/avatars/' . Auth::user()->avatar . '.png') }}" alt="logo" width="50" height="50">
                 </a>
             </li>
         </ul>
