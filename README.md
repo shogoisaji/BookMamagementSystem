@@ -1,66 +1,77 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Book Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### ツール
 
-## About Laravel
+- Laravel
+- tailwindcss
+- Breeze
+- supabase
+- lottie
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 機能
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 新規登録
+- ログイン
+- 在庫書籍一覧表示
+- 書籍詳細確認
+- コメント、おすすめ度の入力
+- 書籍のレンタル、返却
+- 書籍の登録（admin only）
+- 書籍登録用の書籍検索 Google Books Api
+- アカウント管理
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<br><br>
 
-## Learning Laravel
+### 新規登録
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![bms1](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/62e43d27-a5eb-47e1-a79f-911c02d5546b)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<br><br>
+### ログイン
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![bms2](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/a51da869-bac4-4880-b37a-8bb13e928883)
 
-## Laravel Sponsors
+<br><br>
+### 在庫書籍一覧表示
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![bms3](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/944c7c4e-848b-44d3-a186-69fbd1a8e077)
 
-### Premium Partners
+<br><br>
+### 書籍詳細確認
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![bms4](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/a112197b-47c0-4b43-a33d-307ae2289f2b)
 
-## Contributing
+<br><br>
+### コメント、おすすめ度の入力
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![bms5](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/f14a98a7-4b3a-496e-b7b2-d4c78681e6af)
 
-## Code of Conduct
+<br><br>
+### 書籍のレンタル、返却
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![bms6](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/73fa3a60-f320-4f0b-9c2c-91586455b256)
+![bms7](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/344b0ddc-5740-4d2e-93eb-05f56bef91eb)
+![bms8](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/b53616ce-c860-40b2-aa0b-b40276c03196)
 
-## Security Vulnerabilities
+<br><br>
+### 書籍登録用の書籍検索 Google Books Api（admin only）
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![bms10](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/fefda360-ea6c-4ce9-a52f-840dd628d427)
+
+<br><br>
+### 書籍の登録（admin only）
+
+![bms11](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/f7de5ddb-4a83-41d0-a160-61014acf9ac7)
+
+<br><br>
+### アカウント管理
+
+![bms9](https://github.com/shogoisaji/BookMamagementSystem/assets/131496728/8464e4c1-fa48-40c9-8360-4d7a4c18f777)
+
+
+
 
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
