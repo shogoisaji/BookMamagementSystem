@@ -15,7 +15,7 @@
         <!-- Scripts -->
         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
         <link rel="stylesheet" href="https://book-mamagement-system.vercel.app/build/assets/app-744d80f7.css">
-        <script src="https://book-mamagement-system.vercel.app/build/assets/app-633d7d34.js"></script>
+        <script src="https://book-mamagement-system.vercel.app/build/assets/app-633d7d34.js defer"></script>
     </head>
     <x-navigation-bar></x-navigation-bar>
     <body class="font-sans text-gray-800 antialiased bg-gray-500">
